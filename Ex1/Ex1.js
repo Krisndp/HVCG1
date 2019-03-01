@@ -7,8 +7,9 @@ function name() {
   } else {
     txt = person;
   }
-  document.getElementById("name").innerHTML = txt;
-};
+  document.write("<p> Tên của bạn:"+ txt +"</p>");
+}
+
 
 function address() {
 	var txt;
@@ -18,8 +19,9 @@ function address() {
 	} else {
 		txt =  address;
 	}
-	document.getElementById("address").innerHTML = txt;
-};
+	document.write("<p> Thành phố:"+ txt +"</p>");
+}
+
 
 function sdt() {
 	var txt;
@@ -29,15 +31,5 @@ function sdt() {
 	} else {
 		txt =  sdt;
 	}
-	document.getElementById("sdt").innerHTML = txt;
+	document.write("<p> Số điện thoại:"+ txt +"</p>");
 }
-
-function main() {
-	alert('Chào   mừng   đến   với   ứng   dụng   Javascript   đầu   tiên!');
-	name();
-	address();
-	sdt();
-	alert('Cám   ơn   bạn   đã cung   cấp   thông   tin!');
-}
-
-main();

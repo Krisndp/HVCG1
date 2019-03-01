@@ -1,18 +1,17 @@
 
 function Kai() {
-var user = document.getElementById("username").value;
-var pass = document.getElementById("password").value;	
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;	
+//abc123@gmail.com
+var regularEx = new RegExp("[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]{3,6}");
+var regularEx1 = new RegExp("[0-9]{9,9}");
 
 //console.log(user + pass);
 
-	if(user == '' || user == null){
-		alert("Missing Username");
-	} else if(pass == '' || password == null){
-		alert("Missing Password");
-	} else if (pass.length < 6) {
-		alert("Password is too short, please input at least 6 characters!");
+	if(regularEx1.test(phone) && phone.charAt(0) == "0" && phone.charAt(1) == "9"){
+		alert("Email accepted!");
 	} else {
-		alert(user + "_" + pass);
+		alert("Not valid Email");
 	}
 
 }

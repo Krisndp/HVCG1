@@ -9,38 +9,38 @@ function main(){
 	//console.log(toanTu.length);
 	if(toanHang1.split('.').length-1 > 1 || toanHang2.split('.').length-1 >1){
 	alert('Sai cu phap!');
-	}
-	if(tenToanTu == "cong"){
+	} 
+	else if(tenToanTu == "cong"){
 		document.getElementById("input").value = (Number(toanHang1) + Number(toanHang2));
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
 	}
-	if(tenToanTu == "tru"){
+	else if(tenToanTu == "tru"){
 		document.getElementById("input").value = (Number(toanHang1) - Number(toanHang2));
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
 	}
-	if(tenToanTu == "nhan"){
+	else if(tenToanTu == "nhan"){
 		document.getElementById("input").value = (Number(toanHang1) * Number(toanHang2));
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
 	}
-	if(tenToanTu == "chia"){
+	else if(tenToanTu == "chia"){
 		document.getElementById("input").value = (Number(toanHang1) / Number(toanHang2));
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
 	}
-	if(tenToanTu == "chiadu"){
+	else if(tenToanTu == "chiadu"){
 		document.getElementById("input").value = (Number(toanHang1) % Number(toanHang2));
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
 	}
-	if(tenToanTu == "can"){
+	else if(tenToanTu == "can"){
 		if(toanHang1 == '' || toanHang1 == null){
 			document.getElementById("input").value = (Number(Math.sqrt(Number(toanHang2))));
 		} else {
@@ -49,6 +49,12 @@ function main(){
 		toanHang1 = document.getElementById("input").value;
 		toanHang2 = '';
 		toanTu = "";
+	}
+	else if(toanTu == '' || toanTu == null){
+		toanHang1 = document.getElementById("input").value;
+	} 
+	else {
+		alert('Sai cu phap!');
 	} 
 }
 
@@ -62,10 +68,12 @@ function del(){
 	if(toanTu == '' || toanTu == null){
 		toanHang1 = toanHang1.slice(0,toanHang1.length-1);
 		console.log(toanHang1);
-	} else if((toanTu != '' || toanTu != null) && (toanHang2 == '' || toanHang2 == null)){
+	} 
+	else if((toanTu != '' || toanTu != null) && (toanHang2 == '' || toanHang2 == null)){
 		toanTu = '';
 		console.log(toanTu);
-	} else if(toanHang2 != '' || toanHang2 != null){
+	} 
+	else if(toanHang2 != '' || toanHang2 != null){
 		toanHang2 = toanHang2.slice(0,toanHang2.length-1);
 		console.log (toanHang2)
 	}
@@ -75,7 +83,8 @@ function ToanHang(num){
 	document.getElementById("input").value += num;
 	if(toanTu == '' || toanTu == null){
 		toanHang1 += num;
-	} else {
+	} 
+	else {
 		toanHang2 += num;
 	}	
 }
@@ -85,9 +94,10 @@ function ToanTu(ttu, tentt){
 		document.getElementById("input").value += ttu;
 		toanTu = document.getElementById("input").value;
 		tenToanTu = tentt;
-	} else {
-		alert('Chi su dung 1 toan tu.')
 	}
+	// } else {
+	// 	alert('Chi su dung 1 toan tu.')
+	// }
 	//console.log(tenToanTu);
 }
 

@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+	<style type="text/css">
+		#prev, #back {
+			font-size:50px;
+			color: rgba(255,255,255,0.75);
+			cursor: pointer;
+		}
+
+		#prev:hover, #back:hover {
+			color: green;
+		}
+
+		#prev {
+			position: absolute;
+			top: 70px;
+			left: 460px;
+		}
+
+		#box {
+			position: relative;
+		}
+
+		#back {
+			position: absolute;
+			top: 70px;
+			left: 10px;
+		}
+	</style>
+</head>
+
 <body>
 
 <h2>HTML Image</h2>
-<span>
-	<span onclick="back()"> < </span>
+<div id="box">
 	<img id="im" width="500" height="200">
-	<span onclick="run()"> > </span>
-
-</span>
+	<div id="back" onclick="back()"> < </div>
+	<div id="prev" onclick="run()"> > </div>
+</div>
 <script src="Ex5.js"></script>
 
 </body>
